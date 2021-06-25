@@ -2,21 +2,21 @@
   "development": {
     "username": "user",
     "password": "edritech",
-    "database": "ewarga_development",
+    "database": "test-oauth2-dev",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
     "username": "user",
     "password": "edritech",
-    "database": "ewarga_test",
+    "database": "test-oauth2-test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "user",
     "password": "edritech",
-    "database": "ewarga_production",
+    "database": "test-oauth2-prod",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

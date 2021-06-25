@@ -2,24 +2,24 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('Transactions', {
+    await queryInterface.createTable('clients', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      amount: {
-        type: Sequelize.INTEGER
-      },
-      remark: {
+      clientId: {
         type: Sequelize.STRING
       },
-      attachmentUrl: {
+      clientSecret: {
         type: Sequelize.STRING
       },
-      userId: {
-        type: Sequelize.INTEGER
+      redirectUris: {
+        type: Sequelize.STRING
+      },
+      grants: {
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       createdAt: {
         allowNull: false,
@@ -33,6 +33,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('Transactions');
+    await queryInterface.dropTable('clients');
   }
 };
