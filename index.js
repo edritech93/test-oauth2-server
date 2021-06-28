@@ -7,7 +7,9 @@ app.use(express.json({ limit: '10mb' }))
 app.use(cors())
 
 const routeClients = require('./routes/clients')
+const routeTokens = require('./routes/tokens')
 app.use('/', routeClients);
+app.use('/', routeTokens);
 
 app.use(function (req, res) {
   res.status(404).send({ url: req.originalUrl + ' not found' })

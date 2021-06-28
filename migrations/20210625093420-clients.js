@@ -10,15 +10,18 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       clientId: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       clientSecret: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       redirectUris: {
         type: Sequelize.STRING
       },
       grants: {
+        allowNull: false,
         type: Sequelize.ARRAY(Sequelize.STRING)
       },
       createdAt: {
