@@ -6,8 +6,8 @@ app.use(express.urlencoded({ limit: '10mb', extended: true }))
 app.use(express.json({ limit: '10mb' }))
 app.use(cors())
 
-const routeWithoutAuth = require('./routes/transactions')
-routeWithoutAuth(app)
+const routeClients = require('./routes/clients')
+app.use('/', routeClients);
 
 app.use(function (req, res) {
   res.status(404).send({ url: req.originalUrl + ' not found' })
