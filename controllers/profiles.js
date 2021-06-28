@@ -1,7 +1,8 @@
 const ModelUsers = require('../models').Users;
 
 exports.getProfiles = function (req, res) {
-    ModelUsers.findOne({where: {id: 4}})
+    const {user} = res.locals.oauth.token
+    ModelUsers.findOne({where: {id: user.id}})
         .then((result) => {
             res.status(200).json(result);
         })
